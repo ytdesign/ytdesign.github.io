@@ -107,11 +107,13 @@
                    
                    <p>&nbsp;</p>
                 
-
 <!--                   **block of color?-->
                     <div class="col-md-12 col-sm-12 text-center">
-                        
-                  <img src="be there images/body.png" class="img-responsive" alt="Portfolio">
+                    <label for="password">Password (4 to 8 characters):</label>
+                    <input type="text" id="password" name="Passowrd" required
+                              minlength="4" maxlength="8" size="10">
+                    <button onclick="myFunction();">Enter</button>
+                  <img id="test" src="be there images/body.png" class="img-responsive" alt="Portfolio" style="display: none;">
                                         
                     </div>
                                     
@@ -146,6 +148,16 @@
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.js"></script>
-
+<script>
+     function myFunction() {
+          var test = document.getElementById("test");
+          let theText = password.value;
+          if (theText == "password") {
+               test.style.display = ""
+          } else {
+               window.alert("Wrong Password!")
+          }
+     }
+</script>
 </body>
 </html>
