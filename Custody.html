@@ -101,26 +101,28 @@
                     <div class="col-md-4 col-sm-4">
                          <h5><b>Timeline</b></h5>
                          <h5>June 2023 - Present</h5>
-                          <p>&nbsp;</p>
-                         <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        
                     </div>
 
                     </div>
+
                     </div>
                    
                    
-                    <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <div id="passdiv" class="col-md-offset-1 col-md-10 col-sm-12">
                     <label for="password">Password (4 to 8 characters):</label>
                     <input type="text" id="password" name="Password" required
                               minlength="4" maxlength="8" size="10">
                     <button onclick="myFunction();">Enter</button>
                          <p>&nbsp;</p>
                          <p>&nbsp;</p>
-                    <img id="test" src="custody images/body.png" class="img-responsive" alt="Body" style="display: none;">
-                                        
                     </div>
-                   
-                       
+                    <div id="passdiv" class="col-md-offset-1 col-md-10 col-sm-12">
+                    <img id="test" src="custody images/body.png" class="img-responsive" alt="Body" style="display: none;">
+                    </div>
+                                        
      </div>
 </section>
 
@@ -152,7 +154,10 @@
           var test = document.getElementById("test");
           let theText = password.value;
           if (theText == "Design!") {
-               test.style.display = ""
+              test.style.display = ""
+              
+              var div = document.getElementById('passdiv');
+              div.style.display = 'none';
           } else {
                window.alert("Wrong Password!")
           }
